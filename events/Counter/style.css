@@ -1,0 +1,35 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, rgb(174, 113, 113), rgb(133, 102, 67) );
+    color: white;
+}
+
+h1{
+    text-align: center;
+    margin-top: 2.7rem;
+}
+
+.element{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 11%;
+    margin: auto;
+    padding: 0.3rem;
+    margin-top: 1rem;
+    background: linear-gradient(to right, rgb(163, 163, 68), rgb(57, 126, 57));
+    box-shadow: 0px 0px 5px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 5px 12px;
+    background-color: #c35b5b;
+    border-radius: 8px;
+    border: none;
+    outline: 0;
+}
