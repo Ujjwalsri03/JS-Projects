@@ -51,6 +51,7 @@ input {
   -webkit-user-select: none;
   touch-action: manipulation;
   will-change: transform;
+  animation: fadeIn 1s ease-out;
 }
 
 .section1 button:hover {
@@ -71,15 +72,13 @@ input {
   margin: auto;
   padding-top: 1.4rem;
   padding-right: 1.4rem;
-  /* align-items: center;
-   justify-content: center; */
 }
 
 #section2 div {
   width: 83%;
   display: flex;
   margin: 0.5rem;
-  background:linear-gradient(75deg,rgb(182, 254, 182),rgb(255, 243, 189));
+  background: linear-gradient(75deg, rgb(182, 254, 182), rgb(255, 243, 189));
   color: #000000;
   padding: 25px 25px;
   margin: auto;
@@ -91,7 +90,7 @@ input {
 }
 
 #section2 div span {
-  font-size: 20px;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: oblique;
   font-weight: 550;
@@ -105,7 +104,6 @@ input {
   border: none;
   background-color: #000000;
   color: azure;
-  /* font-weight: bold; */
   font-size: 17px;
   text-decoration: none;
   transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
@@ -115,31 +113,30 @@ input {
   will-change: transform;
 }
 
-/* #section2 button.delete:hover {
-  box-shadow: rgb(248, 168, 168) 0 0px 8px;
-  transform: translateY(-2px);
-}
-
-#section2 button.delete:active {
-  box-shadow: none;
-  transform: translateY(0);
-} */
-
-#section2 button.plus:hover {
-  box-shadow: rgb(248, 168, 168) 0 0px 8px;
-  transform: translateY(-2px);
-}
-
-#section2 button.plus:active {
-  box-shadow: none;
-  transform: translateY(0);
-}
+#section2 button.delete:hover,
+#section2 button.plus:hover,
 #section2 button.minus:hover {
   box-shadow: rgb(248, 168, 168) 0 0px 8px;
   transform: translateY(-2px);
 }
 
+#section2 button.delete:active,
+#section2 button.plus:active,
 #section2 button.minus:active {
   box-shadow: none;
   transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.displayData.new {
+  animation: slideIn 0.5s ease-out;
 }

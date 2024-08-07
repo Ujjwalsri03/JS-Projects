@@ -15,24 +15,24 @@ function activeButtons() {
                 updateData();
             } else if (e.target.classList.contains("plus")) {
                 data[index].score = parseInt(data[index].score) + 5;
-                updateData();
+                updateData(false);
             } else if (e.target.classList.contains("minus")) {
                 data[index].score = parseInt(data[index].score) - 5;
-                updateData();
+                updateData(false);
             }
         });
     });
 }
 
-function updateData() {
+function updateData(isNewPlayer = true) {
     data.sort((p1, p2) => {
         return p2.score - p1.score;
     });
 
     let showData = "";
-    data.forEach((item) => {
+    data.forEach((item, index) => {
         showData += `
-            <div class="displayData">
+            <div class="displayData ${isNewPlayer ? 'new' : ''}">
                 <span>${item.fname}</span>
                 <span>${item.lname}</span>
                 <span>${item.country}</span>
@@ -45,6 +45,14 @@ function updateData() {
     });
     section2.innerHTML = showData;
     activeButtons();
+
+    if (isNewPlayer) {
+        document.querySelectorAll('.displayData.new').forEach(element => {
+            element.addEventListener('animationend', () => {
+                element.classList.remove('new');
+            });
+        });
+    }
 }
 
 addBtn.addEventListener("click", (e) => {
