@@ -16,8 +16,8 @@ btn.addEventListener("click", () => {
   if (selectedRating !== "") {
     displayContainer.innerHTML = `
       <strong>Thank you!</strong>
-      <br><br>
-      <strong>Feedback: ${selectedRating}</strong>
+      <br>
+      <strong>Feedback: ${selectedRating}</strong><br>
       <p>We'll use your feedback to improve our customer support.</p>
     `;
   }
