@@ -35,12 +35,10 @@ function filterFunction(value) {
 }
 
 function displayEmojiOnUI(value = emojiData) {
-    emojiUI.innerHTML = "";  // Clear the existing emojis
-
+    emojiUI.innerHTML = "";  
     value.forEach(e => {
         let newEmojiContainer = document.createElement("div");
         let emoji_box = document.createElement("span");
-
         emoji_box.style.width = "50px";
         emoji_box.style.fontSize = "50px";
         emoji_box.innerText = e.emoji;
