@@ -161,3 +161,8 @@ nav .options ul li:hover {
    border-radius: 10px;
 }
 
+.container img{
+    box-shadow: 0px 1px 5px ;
+    border-radius: 7px;
+}
+
