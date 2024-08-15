@@ -52,7 +52,7 @@ document.getElementById('btn').addEventListener('click', function() {
         } else if (selecteditems.includes('Fries') && selecteditems.includes('Coke') && !selecteditems.includes('Burger')) {
             foodImage.src = 'https://img.freepik.com/premium-photo/french-fries-with-ketchup-glass-coke-wood-table_1077530-3197.jpg'; 
         } else if (selecteditems.length === 3) {
-            foodImage.src = 'https://thumbs.dreamstime.com/b/convenient-set-fast-food-burger-french-fries-glass-cold-coke-convenient-set-fast-food-burger-271980411.jpg'; 
+            foodImage.src = 'https://images.unsplash.com/photo-1700835880370-35e4910864ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZyaWVzJTIwY29rZSUyMGFuZCUyMGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D'; 
         } else {
             const foodToShow = selecteditems[0]; 
             switch (foodToShow) {
@@ -63,7 +63,7 @@ document.getElementById('btn').addEventListener('click', function() {
                     foodImage.src = 'https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZnJpZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60';
                     break;
                 case 'Coke':
-                    foodImage.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLOpJ-rDqVWXBuQtwW2Xa3FsVZIA5KuqsnmA&s';
+                    foodImage.src = 'https://images.unsplash.com/photo-1672094732705-b39d78da5bf8?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
                     break;
             }
         }
