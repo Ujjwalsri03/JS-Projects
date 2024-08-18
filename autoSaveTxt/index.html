@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Forms</h1>
+    <div class="container">
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" required>
+            <label for="village">Village:</label>
+            <input type="text" id="village" required>
+            <label for="city">City:</label>
+            <input type="text" id="city" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="userCard" class="card">
+            <!-- User data will be displayed here -->
+        </div>
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
