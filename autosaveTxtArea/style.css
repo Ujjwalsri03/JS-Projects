@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #dbdbdb;
+}
+
+h1{
+    padding-bottom: 1rem;
+}
+.container {
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.saving-text {
+    float: right;
+    font-size: 18px;
+    color: #040404;
+    margin-bottom: 5px;
+    display: none; /* Hidden by default */
+}
+
+textarea {
+    width: 100%;
+    min-height: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+    padding: 10px 20px;
+    box-shadow: 0px 1px 5px;
+}
