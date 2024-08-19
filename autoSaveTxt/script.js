@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (userData) {
             userCard.innerHTML = `
                 <h2>${userData.name}</h2>
+                <p>State: ${userData.state}</p>
                 <p>Phone: ${userData.phone}</p>
                 <p>Village: ${userData.village}</p>
                 <p>City: ${userData.city}</p>
@@ -25,12 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const village = document.getElementById('village').value;
-        const city = document.getElementById('city').value;
+        let name = document.getElementById('name').value;
+        let state = document.getElementById('state').value;
+        let phone = document.getElementById('phone').value;
+        let village = document.getElementById('village').value;
+        let city = document.getElementById('city').value;
 
-        const userData = { name, phone, village, city };
+        let userData = { name,state, phone, village, city };
         saveUserData(userData);
         loadUserData();
     });
