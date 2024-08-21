@@ -1,30 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
 
-    /* background: url();
+
+header {
+    background-image: url(./pexels-igor-haritanovich-814387-1687341.jpg);
+    background-size: cover;
     background-position: center;
-    background-size: cover; */
+    color: white;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav h1{
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-right: 2.5rem;
+}
+
+nav ul li {
+    font-size: 21px;
+    padding-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover{
+    color: #06b49a;
+    text-decoration: underline;   
+}
+
+nav ul li button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav ul li button:hover{
+    background-color: #05a38c;;
+    color: black;
+    transition: all 0.4s ease-in;
+}
+
+.search-section {
+    /* text-align: center; */
+    padding-bottom: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* position: relative; */
+}
+
+.search-section h1 {
+    font-size: 40px;
+    max-width: 750px;
+    
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    position: sticky;
+    top: 0; 
+    /* background-color: white; */
+    z-index: 1000; 
+    padding: 10px 0; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.search-box select,
+.search-box input {
+    padding: 11px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-box input {
+    width: 350px;
+}
+
+.search-box button {
+    background-color: #06b49a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-box button:hover{
+    transition: all 0.5s ease-in;
+    background-color: #f0f0f0;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0px 1px 5px;
+}
+
+main h1 {
+    text-align: center;
+    color: #333;
+    padding: 0.6rem 2rem;
+    font-style: oblique;
+    font-size: 40px;
+}
+
+#box {
+    columns: 4; /* Creates a Masonry effect by defining the number of columns */
+    column-gap: 15px; /* Space between columns */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+    margin-bottom: 15px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: inline-block; 
+}
+
+.image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
 
-/* function displayPhotos(){
-//     photosArray.forEach((photo)=> {
-//        let item = document.createElement("a");
-//        setAttribute(item, {
-//             href : photo.links.html,
-//             target : "_blank"    
-//        })
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+    /* margin: 10px; */
+}
 
-//        let img = document.createElement("img");
-//        setAttribute(img, {
-//             src: photo.urls.regular
-//        })
+.img-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
-//        item.append(img);
+.overlay {
+    position: absolute;
+    top: 5px;
+    left: auto;
+    right: 5px;
+    bottom: 0;
+    display: flex;
+    justify-content: right;
+    align-content:flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    gap: 10px;
+    width: 100px;
+    height: 50px;
+}
 
-//        imageContainer.append(item);
-//     });
-// }
+.img-wrapper:hover .overlay {
+    opacity: 1;
+}
 
-// function setAttribute(element, attributes) {
-//     for(let key in attributes) {
-//         element.setAttribute(key, attributes[key]);
-//     }
-// } */
+.like-button, .save-button {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.like-button:hover, .save-button:hover {
+    background-color:  #06b49a;
+    transition: all 0.3s ease-in-out;
+}

@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Endless Scrolling</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Endless Scrolling</h1>
-    <div class="box" id="box"></div>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1 class="logo">Pexels</h1>
+        <ul>
+          <li>Explore</li>
+          <li>License</li>
+          <li>Upload</li>
+          <li><button>Join</button></li>
+        </ul>
+      </nav>
+      <div class="search-section">
+        <h1>
+          The best free stock photos, royalty free images & videos shared by
+          creators.
+        </h1>
+        <div class="search-box">
+          <select>
+            <option>Photos</option>
+            <option>Videos</option>
+          </select>
+          <input id="searchInput" type="text" placeholder="Search for free photos" />
+          <button id="searchBtn">Search</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1>Free Stock Images</h1>
+      <div class="box" id="box"></div>
+    </main>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
