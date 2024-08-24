@@ -20,8 +20,8 @@ async function searchImage(){
     let results = data.results;
     
     results.map((result) => {
-    let imageWrapper = document.createElement("div");
-    imageWrapper.classList.add("search-result");
+    // let imageWrapper = document.createElement("div");
+    // imageWrapper.classList.add("search-result");
     let image = document.createElement("img");
     image.src = result.urls.small;
     image.alt = result.alt_description;
@@ -30,9 +30,9 @@ async function searchImage(){
     imageLink.target = "_blank";
     imageLink.textContent = result.alt_description;
     
-    imageWrapper.appendChild(image);
-    imageWrapper.appendChild(imageLink);
-    searchResults.appendChild(imageWrapper);
+    searchResults.appendChild(image);
+    searchResults.appendChild(imageLink);
+    // searchResults.appendChild(imageWrapper);
 });
     
     page++;
