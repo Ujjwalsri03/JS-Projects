@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgMi8wymwneMX6uZF_PhcsR_8mmJSevoxlbQ&s"
+            alt="Logo"
+          />
+          <span>Book</span>
+        </a>
+      </div>
+      <div class="nav-items">
+        <label class="switch">
+          <input type="checkbox" id="switch" />
+          <span class="slider"></span>
+        </label>
+        <a href="signupform.html">
+          <button class="signup-button">
+            Sign up <span class="arrow">→</span>
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>ALL CATEGORIES</h2>
+        <ul id="category-list">
+          <!-- Categories will be dynamically added here -->
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <h1>Best Sellers <span>Books</span></h1>
+        <div id="book-list" class="book-list">
+          <!-- Books will be dynamically added here -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="bookModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-book-info">
+          <img src="" id="bookImage" alt="Book Image" />
+          <div class="modal-text">
+            <h2 id="bookTitle">Book Title</h2>
+            <p id="bookAuthor">Author</p>
+            <p id="bookDescription">Book Description</p>
+            <div class="buy-links">
+              <!-- Replace with actual links/icons -->
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9Mdeo4S4YXDOaI4Xm53DaaHVlccVG_j7Yg&s" alt="Amazon" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiyKqGkrFt1ozi8IFXAoKhODRr3-dpTgWMZw&s" alt="Apple Books" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShlt-5IPZmNMLFKNjyj5GXGL7a7a1dnSU3Lg&s" alt="Barnes & Noble" />
+            </div>
+          </div>
+        </div>
+        <button id="addToShoppingList">ADD TO SHOPPING LIST</button>
+      </div>
+    </div>
+
+    <footer>
+      <a href="">All right reserved @Ujjwal</a>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- <script src="list.js"></script> -->
+  </body>
+</html>
