@@ -39,22 +39,38 @@ function displayBooks(data) {
         h3.innerHTML = `${listObject.list_name}`;
         div.appendChild(h3);
 
+        let div2 = document.createElement("div");
+        div2.classList.add("bookAuthorImages");
+
         // Display the first 5 book images
         let booksDisplayed = 0;
         listObject.books.forEach((book) => {
             if (book.book_image && booksDisplayed < 5) {
+
+                let div3 = document.createElement("div");
+                div3.classList.add("bookAuthor");
+                
                 let img = document.createElement("img");
                 img.src = book.book_image;
                 img.alt = `${book.author} - Book Image`;
 
-                let p = document.createElement("p");
-                p.innerHTML = `${book.author}`;
+                let p1 = document.createElement("p");
+                p1.classList.add("title");
+                p1.innerHTML = `${book.title}`;
+
+
+                let p2 = document.createElement("p");
+                p2.classList.add("author");
+                p2.innerHTML = `${book.author}`;
 
                 // Add click event to show book details in modal
                 img.addEventListener("click", () => showBookDetails(book));
 
-                div.appendChild(img);
-                // div.appendChild(p);
+                div3.appendChild(img);
+                div3.appendChild(p1);
+                div3.appendChild(p2);
+                div2.appendChild(div3)
+                div.appendChild(div2);
                 booksDisplayed++;
             }
         });
@@ -125,7 +141,7 @@ async function filterBooksByCategory(categoryName) {
 
 // Function to update the <h1> heading based on the selected category
 function updateHeading(categoryName) {
-    heading.innerHTML = `Best Sellers: ${categoryName}`; // Update the heading text
+    heading.innerHTML = `Best Sellers: ${categoryName}`; 
 }
 
 // Function to show book details in the modal

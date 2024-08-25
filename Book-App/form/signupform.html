@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Sign In</title>
+    <link rel="stylesheet" href="formstyle.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgMi8wymwneMX6uZF_PhcsR_8mmJSevoxlbQ&s"
+              alt="Logo"
+            />
+            <span>Book</span>
+          </a>
+        </div>
+        <div class="nav-items">
+          <label class="switch">
+            <input type="checkbox" id="switch" />
+            <span class="slider"></span>
+          </label>
+          <a href="./form/signupform.html">
+            <button class="signup-button">
+              Sign up <span class="arrow">→</span>
+            </button>
+          </a>
+        </div>
+      </nav>
+  
+    <div class="form-container">
+        <!-- Sign Up Form -->
+        <div id="sign-up-form" class="form">
+            <span class="close-btn" onclick="toggleForms()">×</span>
+            <input type="text" id="signup-name" placeholder="NAME">
+            <input type="email" id="signup-email" placeholder="EMAIL">
+            <input type="password" id="signup-password" placeholder="PASSWORD">
+            <button onclick="signUp()">SIGN UP</button>
+            <div class="toggle-link">
+                <a href="#" onclick="toggleForms()">SIGN UP</a>
+                <a href="#" onclick="toggleForms()">SIGN IN</a>
+            </div>
+        </div>
+
+        <!-- Sign In Form -->
+        <div id="sign-in-form" class="form hidden">
+            <span class="close-btn" onclick="toggleForms()">×</span>
+            <input type="email" id="signin-email" placeholder="EMAIL">
+            <input type="password" id="signin-password" placeholder="PASSWORD">
+            <button onclick="signIn()">SIGN IN</button>
+            <div class="toggle-link">
+                <a href="#" onclick="toggleForms()">SIGN UP</a>
+                <a href="#" onclick="toggleForms()">SIGN IN</a>
+            </div>
+            <!-- Go to Book App button -->
+            <a href="../index.html" id="redirect-link" class="hidden">
+                <button id="redirect">Go to Book App</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
