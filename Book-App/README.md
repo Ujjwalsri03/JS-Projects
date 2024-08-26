@@ -31,10 +31,10 @@ Open index.html in your preferred web browser.
 
 ## 🎮 Usage
 
-Sign Up/Login: Click on the "Sign Up" or "Log In" buttons to access or create your account.
+**Sign Up/Login:** Click on the "Sign Up" or "Log In" buttons to access or create your account.
 Toggle Dark Mode: Use the toggle switch in the top right corner to switch between light and dark themes.
 
-Browse Books: Click on a book to view more details about it.
+**Browse Books:** Click on a book to view more details about it.
 Change Categories: Select different categories to see books under that specific genre.
 
 ## 📊 API Reference
@@ -42,17 +42,18 @@ The project uses the following APIs:
 
 Top Books API: Fetches the list of top books.
 
-Endpoint: https://books-backend.p.goit.global/books/top-books
+**Endpoint:** https://books-backend.p.goit.global/books/top-books
+
 Method: GET
 Response: JSON array of top books.
 Category List API: Fetches a list of book categories.
 
-Endpoint: https://books-backend.p.goit.global/books/category-list
+**Endpoint:** https://books-backend.p.goit.global/books/category-list
 Method: GET
 Response: JSON array of book categories.
 
 ## 📁 File Structure
-graphl
+graphql
 Copy code
 book-app/
 │
@@ -75,12 +76,17 @@ book-app/
 
 ## 🛠️ JavaScript Functionalities Used
 
-Fetching Data from APIs: Used fetch() to make API requests to get the list of top books and book categories.
-Dynamic Content Rendering: JavaScript DOM manipulation is used to dynamically update the book list and categories based on user interaction.
-Event Handling: Added event listeners for user interactions like clicking on books, toggling dark mode, and category selection.
-Theme Switching (Dark Mode): Implemented a function to toggle between light and dark modes using a switch button.
-User Authentication: Basic Sign Up and Log In functionality using form handling in JavaScript.
-🤝 Contributing
+**Fetching Data from APIs:** Used fetch() to make API requests to get the list of top books and book categories.
+
+**Dynamic Content Rendering:** JavaScript DOM manipulation is used to dynamically update the book list and categories based on user interaction.
+
+**Event Handling:** Added event listeners for user interactions like clicking on books, toggling dark mode, and category selection.
+
+**Theme Switching (Dark Mode):** Implemented a function to toggle between light and dark modes using a switch button.
+
+**User Authentication:** Basic Sign Up and Log In functionality using form handling in JavaScript.
+
+### 🤝 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
 
 ## 📜 License
@@ -88,6 +94,6 @@ This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgements
 API Providers
-Geekster for guidance and support.
+**Geekster** for guidance and support.
 All contributors and testers who helped with the project.
 
