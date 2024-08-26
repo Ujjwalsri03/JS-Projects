@@ -1,0 +1,138 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(75deg, rgb(223, 255, 223), rgb(255, 255, 219));
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    width: 100%;
+    /* background-color: #007bff; */
+    padding: 6px 20px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.heading {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    font-size: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: oblique;
+}
+
+/* Container for the chart */
+.container {
+    text-align: center;
+    width: 80%;
+    margin-top: 50px; 
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 70vh;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: background-color 0.5s ease;
+}
+
+canvas {
+    width: 100% !important;
+    height: 500px !important;
+    margin-bottom: 1rem;
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-right: 4rem;
+    margin-top: 0.6rem;
+    
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    transition: .4s;
+    border-radius: 25px;
+    box-shadow: 0px 0px 9px rgb(255, 253, 253);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #000000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(28px);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #000000;
+    color: #f0f0f0;
+}
+
+body.dark-mode .chart-container {
+    background-color: #282828;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+}
+
+body.dark-mode .navbar {
+    background-color: #000000;
+}
+
+body.dark-mode .heading {
+    padding-top:    1rem;
+    color: #f0f0f0;
+}
+
+body.dark-mode .slider:before{
+   background-color: #000000;
+}

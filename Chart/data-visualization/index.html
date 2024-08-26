@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar-Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar">
+        <!-- Toggle Switch for Dark Mode -->
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+    </nav>
+
+    <h1 class="heading">Annual Salary Graph</h1>
+
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
