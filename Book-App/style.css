@@ -533,7 +533,7 @@ footer a::before {
   background-color: #ffdd00; /* Your preferred color */
   color: black;
   text-align: center;
-  padding: 17px 0;
+  padding: 16px 0;
   font-weight: 500;
   display: none; /* Hidden by default */
   transition: opacity 0.8s ease-in;
