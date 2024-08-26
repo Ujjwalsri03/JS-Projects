@@ -49,15 +49,24 @@ function displayBooks(data) {
 
                 let div3 = document.createElement("div");
                 div3.classList.add("bookAuthor");
-                
+
+                let imgContainer = document.createElement("div");
+                imgContainer.classList.add("img-container");
+
                 let img = document.createElement("img");
                 img.src = book.book_image;
                 img.alt = `${book.author} - Book Image`;
 
+                let quickView = document.createElement("div");
+                quickView.classList.add("quick-view");
+                quickView.innerHTML = "QUICK VIEW";
+
+                imgContainer.appendChild(img);
+                imgContainer.appendChild(quickView);
+
                 let p1 = document.createElement("p");
                 p1.classList.add("title");
                 p1.innerHTML = `${book.title}`;
-
 
                 let p2 = document.createElement("p");
                 p2.classList.add("author");
@@ -66,10 +75,10 @@ function displayBooks(data) {
                 // Add click event to show book details in modal
                 img.addEventListener("click", () => showBookDetails(book));
 
-                div3.appendChild(img);
+                div3.appendChild(imgContainer);
                 div3.appendChild(p1);
                 div3.appendChild(p2);
-                div2.appendChild(div3)
+                div2.appendChild(div3);
                 div.appendChild(div2);
                 booksDisplayed++;
             }
