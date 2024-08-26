@@ -86,7 +86,7 @@ canvas {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ffffff;
+    background-color: #000000;
     transition: .4s;
     border-radius: 25px;
     box-shadow: 0px 0px 9px rgb(255, 253, 253);
@@ -133,6 +133,10 @@ body.dark-mode .heading {
     color: #f0f0f0;
 }
 
+body.dark-mode .slider{
+    background-color: #fff;
+}
+
 body.dark-mode .slider:before{
-   background-color: #000000;
+   background-color: #0b0b0b;
 }
