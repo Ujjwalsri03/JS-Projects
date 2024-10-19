@@ -70,7 +70,7 @@ function updateStockInfo(stockSymbol, stockData) {
     const latestData = stockData[latestDate];
 
     if (latestData) {
-        document.getElementById('stock').innerText = stock;
+        document.getElementById('stock').innerText = stockSymbol;
         document.getElementById('price').innerText = latestData['4. close'];
         document.getElementById('change').innerText = (parseFloat(latestData['4. close']) - parseFloat(latestData['1. open'])).toFixed(2);
         document.getElementById('volume').innerText = latestData['5. volume'];
