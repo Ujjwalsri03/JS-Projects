@@ -4,28 +4,27 @@ const searchInput = document.getElementById('stock-search');
 const searchButton = document.getElementById('search-stock');
 const loadButton = document.getElementById('load-stock');
 const compareTable = document.getElementById('compare-stocks').getElementsByTagName('tbody')[0];
-let chart; // Global chart variable for updating later
+let chart; 
 
-// Function to fetch stock data
+
 async function fetchStockData(stockSymbol) {
     const response = await fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockSymbol}&apikey=${API_KEY}`);
     const data = await response.json();
     
-    // Check for errors in the API response
     if (data['Error Message']) {
         alert('Invalid stock symbol or no data available.');
         return null;
     }
     
-    return data['Time Series (Daily)'] || null; // Return null if no data
+    return data['Time Series (Daily)'] || null; 
 }
 
-// Function to update the stock chart and information
+
 function updateStockChart(stockSymbol, stockData) {
     const labels = Object.keys(stockData).reverse();
     const prices = labels.map(date => parseFloat(stockData[date]['4. close']));
 
-    if (chart) chart.destroy(); // Destroy the previous chart if it exists
+    if (chart) chart.destroy(); 
 
     const ctx = document.getElementById('stock-chart').getContext('2d');
     chart = new Chart(ctx, {
@@ -64,7 +63,7 @@ function updateStockChart(stockSymbol, stockData) {
     });
 }
 
-// Function to update stock information table
+
 function updateStockInfo(stockSymbol, stockData) {
     const latestDate = Object.keys(stockData)[0];
     const latestData = stockData[latestDate];
@@ -83,7 +82,7 @@ function updateStockInfo(stockSymbol, stockData) {
     }
 }
 
-// Function to add stock to comparison table
+
 function addToComparisonTable(stockSymbol, stockData) {
     const latestDate = Object.keys(stockData)[0];
     const latestData = stockData[latestDate];
