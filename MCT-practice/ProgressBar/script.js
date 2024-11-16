@@ -1,4 +1,5 @@
 const progress = document.getElementById('progress');
+const progressLabel = document.getElementById('progress-label'); // Label to display percentage
 let isInProgress = false;
 let reqAniFrameId;
 
@@ -43,8 +44,8 @@ function startProgress() {
   if (progressPercent <= 100) {
     setProgressWidth(progressPercent);
     reqAniFrameId = requestAnimationFrame(startProgress);
-  } else{
-    onStop();
+  } else {
+    onStop(); // Stop automatically when progress reaches 100%
   }
 }
 
@@ -58,4 +59,5 @@ function getProgressWidth() {
 
 function setProgressWidth(progressPercent) {
   progress.style.width = progressPercent + '%';
+  progressLabel.textContent = `${Math.floor(progressPercent)}%`; // Update the percentage label
 }
