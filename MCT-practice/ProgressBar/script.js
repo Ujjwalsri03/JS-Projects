@@ -43,6 +43,8 @@ function startProgress() {
   if (progressPercent <= 100) {
     setProgressWidth(progressPercent);
     reqAniFrameId = requestAnimationFrame(startProgress);
+  } else{
+    onStop();
   }
 }
 
