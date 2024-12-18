@@ -6,7 +6,7 @@ const micButton = document.getElementById("audioToText")
 
 let userMessage = null;
 
-const API_KEY = "AIzaSyDNvesCy1LVNtbuBTDqoqpKEedaj2vwzSM"
+const API_KEY = "AIzaSyAhb6u5rcxlwuBMy9wIiQa9xE8TCT_dMbY"
 
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`
 
