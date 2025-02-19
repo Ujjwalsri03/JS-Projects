@@ -1,0 +1,93 @@
+ 
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --background: #f8f9fa;
+  --text-dark: #343a40;
+  --text-white: #ffffff;
+  --border: #dee2e6;
+  --selected-chat: #e9ecef;
+  --my-mssg: #007bff;
+  --online: #28a745;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.modal img {
+  max-width: 80%;
+  max-height: 80vh;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+
+.profile-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.current-avatar img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-list img {
+  max-width: 100%;
+  height: auto;
+}
+
+.chat {
+  background-image: url("../images/chat-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.send-btn {
+  background-color: var(--my-mssg);
+  color: var(--text-white);
+}
+
+.send-btn:hover {
+  background-color: #0056b3;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--my-mssg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3;
+} 
