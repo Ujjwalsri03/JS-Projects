@@ -16,3 +16,18 @@ A real-time chatroom application built with **HTML, CSS, JavaScript**, and **Boo
 1. **Clone the Repository**  
    ```bash
    git clone https://github.com/your-username/chatroom-app.git
+
+2. ## 🛠️ Installation & Setup
+
+### Navigate to the Project Directory
+```bash
+
+### cd chatroom-app
+### Open index.html in the Browser
+3. ## 🎨 Theme & Background Change
+   ## 🌈 Change Theme
+### Click the "Menu" dropdown in the sidebar.
+Select a theme color to change the UI.
+4. ## 🖼️ Change Background
+Click "Menu" and select Change Background.
+Choose from different background images.
