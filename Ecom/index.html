@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>E-Commerce Site </h1>
+    <div class="actions">
+      <input type="text" id="searchInput" placeholder="Search products...  ">
+      <label>Min: <input type="number" id="minPrice"></label>
+      <label>Max: <input type="number" id="maxPrice"></label>
+      <button onclick="applyFilters()">Filter</button>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+      <button onclick="goToLiked()">Liked ❤️ </button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+  <main>
+    <div id="productContainer" class="product-grid"></div>
+  </main>
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
